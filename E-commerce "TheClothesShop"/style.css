@@ -132,6 +132,9 @@ footer{
     body{
         word-break: break-all;
     }
+    main{
+        overflow: scroll;
+    }
     main div.Productos {
         grid-template-columns: 1fr;
     }
