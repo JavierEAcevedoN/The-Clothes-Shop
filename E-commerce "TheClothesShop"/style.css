@@ -1,0 +1,138 @@
+/* general */
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+    display: grid;
+    grid-template-areas: 
+    "header main"
+    "nav main"
+    "footer main";
+    --colorPrimario: #373A40;
+    --colorSecundario: #DC5F00;
+    text-align: center;
+}
+/* header */
+header {
+    color: var(--colorPrimario);
+    grid-area: header;
+    height: fit-content;
+    align-self: start;
+}
+/* nav */
+nav {
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-self: center;
+}
+nav a{
+    color: var(--colorPrimario);
+    text-decoration: none;
+    padding: 5px;
+}
+nav a.TLP{
+    border: 2px solid var(--colorPrimario);
+    border-radius: 10px 0px 0px 10px;
+}
+/* main */
+main{
+    grid-area: main;
+    margin: 15px 0px;
+    color: var(--colorPrimario);
+    border: 2px solid var(--colorPrimario);
+    height: 95vh;
+    overflow-y: scroll;
+}
+main h2{
+    margin: 10px 0px;
+}
+main div.Productos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border-radius: 30px;
+}
+main div.Productos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    border: 2px solid var(--colorSecundario);
+    border-radius: 30px;
+}
+main div.Productos div img {
+    width: 100px;
+}
+main div.Productos div div.Informacion {
+    border: 2px solid var(--colorPrimario);
+    padding: 5px;
+}
+main div.Productos div div.Informacion div.Informacion_detalles {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    width: 100%;
+    justify-content: space-around;
+}
+main div.Productos div div.Informacion div.Informacion_detalles  a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid var(--colorSecundario);
+    background-color: var(--colorPrimario);
+    border-radius: 10px;
+    padding: 5px;
+}
+/* footer */
+footer{
+    grid-area: footer;
+    height: fit-content;
+    align-self: end;
+    position: relative;
+    bottom:6vh;
+}
+/* reglas */
+@media (max-width:870px) {
+    main div.Productos {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+@media (max-width:710px) {
+    main div.Productos {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width:540px) {
+    main div.Productos {
+        grid-template-columns: 1fr;
+    }
+}
+@media (max-width:380px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    header{
+        align-self: center;
+    }
+    nav a.TLP{
+        border-radius: 10px;
+    }
+    main{
+        height: 70vh;
+    }
+    main div.Productos {
+        grid-template-columns: 1fr;
+    }
+    footer{
+        align-self: center;
+        position: static;
+    }
+}
+@media (max-width:190px) {
+    body{
+        word-break: break-all;
+    }
+    main div.Productos {
+        grid-template-columns: 1fr;
+    }
+}
