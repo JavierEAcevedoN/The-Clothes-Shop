@@ -43,6 +43,8 @@ nav a:hover{
 }
 nav a.Carritos{
     margin-top: 50px;
+    border: 2px solid var(--colorPrimario);
+    border-radius: 10px 0px 0px 10px;
 }
 /* main */
 main{
@@ -59,15 +61,15 @@ main h2{
     margin: 10px 0px;
 }
 main div.Productos {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     border-radius: 30px;
 }
 main div.Productos div {
     display: flex;
-    flex-direction: column;
     align-items: center;
     margin: 10px;
+    padding: 10px;
     border: 2px solid var(--colorSecundario);
     border-radius: 30px;
     background-color: var(--ColorIntermedio);
@@ -82,27 +84,28 @@ main div.Productos div img {
     border-radius: 50px;
     transition-duration: 1s;
 }
-main div.Productos div div.Informacion {
-    border: 2px solid var(--colorPrimario);
-    padding: 5px;
-}
-main div.Productos div div.Informacion div.Informacion_detalles {
-    display: flex;
-    flex-direction: row;
+main div.Productos div div.Informacion {    
+    display: grid;
     border: none;
-    width: 100%;
-    justify-content: space-around;
+    padding: 5px;
+    grid-template-rows: 0.5fr 0.5fr;
 }
-main div.Productos div div.Informacion div.Informacion_detalles  a {
+main div.Productos div div.Informacion div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    border: none;
+}
+main div.Productos div a {
     color: var(--colorPrimario);
     text-decoration: none;
     border: 2px solid var(--colorSecundario);
     background-color: var(--ColorIntermedio);
     border-radius: 10px;
     padding: 5px;
+    grid-area: end;
     transition-duration: 1s;
 }
-main div.Productos div div.Informacion div.Informacion_detalles  a:hover {
+main div.Productos div a:hover {
     color: var(--colorSecundario);
 }
 /* footer */
@@ -123,11 +126,6 @@ footer{
         width: 150px;
     }
 }
-@media (max-width:1130px) {
-    main div.Productos {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
 @media (max-width:895px) {  
     body{
         font-size: 10px;
@@ -136,17 +134,7 @@ footer{
         width: 100px;
     }
 }
-@media (max-width:710px) {
-    main div.Productos {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-@media (max-width:540px) {
-    main div.Productos {
-        grid-template-columns: 1fr;
-    }
-}
-@media (max-width:380px) {
+@media (max-width:650px) {
     body{
         display: flex;
         flex-direction: column;
@@ -154,25 +142,38 @@ footer{
     header{
         align-self: center;
     }
+    nav a.Carritos{
+        border-radius: 10px;
+    }
     main{
         height: 70vh;
-    }
-    main div.Productos {
-        grid-template-columns: 1fr;
     }
     footer{
         align-self: center;
         position: static;
     }
 }
-@media (max-width:190px) {
-    body{
-        word-break: break-all;
+@media (max-width:460px) {
+    main div.Productos div {
+        flex-direction: column;
     }
-    main{
-        overflow: scroll;
+}
+@media (max-width:365px) {
+    main div.Productos div div.Informacion {
+        grid-template-columns: 0.1fr 0.1fr;
+        height: 200px;
+        width: 30vw;
+        justify-content: center;
     }
-    main div.Productos {
-        grid-template-columns: 1fr;
+    main div.Productos div div.Informacion div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (max-width:220px) {
+    main div.Productos div div.Informacion {
+        display: flex;
+        flex-direction: column;
+        height: auto;
     }
 }
