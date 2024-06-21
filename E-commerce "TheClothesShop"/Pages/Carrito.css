@@ -60,6 +60,9 @@ main{
 main h2{
     margin: 10px 0px;
 }
+main > p {
+    transition-duration: 1s;
+}
 main section.Productos {
     display: flex;
     flex-direction: column;
@@ -70,7 +73,9 @@ main section.Productos div {
     align-items: center;
     margin: 10px;
     border-radius: 30px;
+    border: 2px solid var(--colorSecundario);
     background-color: var(--ColorIntermedio);
+    padding: 5px;
     transition-duration: 1s;
 }
 main section.Productos div:hover {
@@ -100,10 +105,61 @@ main section.Productos div a {
     background-color: var(--ColorIntermedio);
     border-radius: 10px;
     padding: 5px;
-    grid-area: end;
     transition-duration: 1s;
 }
 main section.Productos div a:hover {
+    color: var(--colorSecundario);
+}
+main section.Total {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+main section.Total a {
+    color: var(--colorPrimario);
+    text-decoration: none;
+    border: 2px solid var(--colorSecundario);
+    background-color: var(--ColorIntermedio);
+    border-radius: 10px;
+    padding: 5px;
+    transition-duration: 1s;
+}
+main section.Total a:hover {
+    color: var(--colorSecundario);
+}
+main section.Total > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 30px;
+    border: 2px solid var(--colorSecundario);
+    background-color: var(--ColorIntermedio);
+    padding: 10px;
+}
+main section.Total div div{
+    display: flex;
+    flex-direction: column;
+    transition-duration: 1s ;
+    align-items: center;
+}
+main section.Total div div p {
+    margin: 10px;
+}
+main section.Total div div:hover {
+    color: var(--colorSecundario);
+}
+main section.Total div a {
+    color: var(--colorPrimario);
+    text-decoration: none;
+    border: 2px solid var(--colorSecundario);
+    background-color: var(--ColorIntermedio);
+    border-radius: 10px;
+    padding: 5px;
+    transition-duration: 1s;
+}
+main section.Total div a:hover {
     color: var(--colorSecundario);
 }
 /* footer */
@@ -161,12 +217,28 @@ footer{
         display: flex;
         flex-direction: column;
     }
+    main section.Total {
+        flex-direction: row;
+        flex-direction: column;
+    }
+    main section.Total > div {
+        flex-direction: row;
+        flex-direction: column;
+        margin: 10px;
+    }
 }
 @media (max-width:150px) {
     body{
         word-break: break-all;
     }
+    main section.Productos div {
+        border: none;
+        padding: 0px;
+    }
     main section.Productos div img {
         width: 100%;
+    }
+    main section.Total > div {
+        border: none;
     }
 }
