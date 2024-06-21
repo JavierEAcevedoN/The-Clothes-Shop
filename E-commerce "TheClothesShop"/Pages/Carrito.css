@@ -60,42 +60,40 @@ main{
 main h2{
     margin: 10px 0px;
 }
-main div.Productos {
+main section.Productos {
     display: flex;
     flex-direction: column;
     border-radius: 30px;
 }
-main div.Productos div {
+main section.Productos div {
     display: flex;
     align-items: center;
     margin: 10px;
-    padding: 10px;
-    border: 2px solid var(--colorSecundario);
     border-radius: 30px;
     background-color: var(--ColorIntermedio);
     transition-duration: 1s;
 }
-main div.Productos div:hover {
+main section.Productos div:hover {
     color:var(--colorSecundario);
 }
-main div.Productos div img {
+main section.Productos div img {
     width: 200px;
     padding: 5px;
     border-radius: 50px;
     transition-duration: 1s;
 }
-main div.Productos div div.Informacion {    
+main section.Productos div div.Informacion {    
     display: grid;
     border: none;
-    padding: 5px;
-    grid-template-rows: 0.5fr 0.5fr;
+    margin: 0px;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr;
 }
-main div.Productos div div.Informacion div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+main section.Productos div div.Informacion div {
+    display: flex;
+    flex-direction: column;
     border: none;
 }
-main div.Productos div a {
+main section.Productos div a {
     color: var(--colorPrimario);
     text-decoration: none;
     border: 2px solid var(--colorSecundario);
@@ -105,7 +103,7 @@ main div.Productos div a {
     grid-area: end;
     transition-duration: 1s;
 }
-main div.Productos div a:hover {
+main section.Productos div a:hover {
     color: var(--colorSecundario);
 }
 /* footer */
@@ -118,23 +116,23 @@ footer{
     bottom:2vh;
 }
 /* reglas */
-@media (max-width:1360px) {
+@media (max-width:1400px) {  
     body{
         font-size: 15px;
     }
-    main div.Productos div img {
+    main section.Productos div img {
         width: 150px;
     }
 }
-@media (max-width:895px) {  
+@media (max-width:1000px) {  
     body{
         font-size: 10px;
     }
-    main div.Productos div img {
+    main section.Productos div img {
         width: 100px;
     }
 }
-@media (max-width:650px) {
+@media (max-width:770px) {
     body{
         display: flex;
         flex-direction: column;
@@ -153,27 +151,22 @@ footer{
         position: static;
     }
 }
-@media (max-width:460px) {
-    main div.Productos div {
+@media (max-width:600px) {
+    main section.Productos div {
         flex-direction: column;
     }
 }
-@media (max-width:365px) {
-    main div.Productos div div.Informacion {
-        grid-template-columns: 0.1fr 0.1fr;
-        height: 200px;
-        width: 30vw;
-        justify-content: center;
-    }
-    main div.Productos div div.Informacion div {
+@media (max-width:400px) {
+    main section.Productos div div.Informacion {
         display: flex;
         flex-direction: column;
     }
 }
-@media (max-width:220px) {
-    main div.Productos div div.Informacion {
-        display: flex;
-        flex-direction: column;
-        height: auto;
+@media (max-width:150px) {
+    body{
+        word-break: break-all;
+    }
+    main section.Productos div img {
+        width: 100%;
     }
 }

@@ -157,9 +157,6 @@ footer{
     main{
         height: 70vh;
     }
-    main div.Productos {
-        grid-template-columns: 1fr;
-    }
     footer{
         align-self: center;
         position: static;
@@ -171,8 +168,5 @@ footer{
     }
     main{
         overflow: scroll;
-    }
-    main div.Productos {
-        grid-template-columns: 1fr;
     }
 }
