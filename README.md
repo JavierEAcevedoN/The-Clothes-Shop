@@ -1,4 +1,4 @@
-# EVALUACION HTML/CSS 🚀
+# The-Clothes-Shop 🚀
 ## Tabla de contenidos 📚
 - [Descripcion](#descripcion)
 - [Proceso](#proceso)
@@ -31,7 +31,7 @@ En la creracion del evaluativo se utilizaron las tecnologias de HTML para la maq
 
 Clonar repositorio:
 ```sh
-https://github.com/JavierEAcevedoN/EVALUACION-FILTRO_Acevedo_Javier_Noguera_Eduardo.git
+https://github.com/JavierEAcevedoN/The-Clothes-Shop.git
 ```
 <h3 id="screenshots">Screenshots 📷</h3>
 
@@ -44,6 +44,8 @@ Pagina del carrito vacio.
 <h3 id="uso">Uso ✋</h3>
 
 Descarga el zip de la pagina y ejecuta el `index.html` o clona el repositorio y ejecuta con el live server en VS Code.
+O se puede abrir con el siguiente enlace:
+- [Pagina](https://javiereacevedon.github.io/The-Clothes-Shop/E-commerce%20%22TheClothesShop%22/index.html)
 <h3 id="autor">Autor 👤</h3>
 
 - [JavierEAcevedoN](https://github.com/JavierEAcevedoN)
